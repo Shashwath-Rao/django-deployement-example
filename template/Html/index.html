@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{%load cutter%}
+{% block begin %}
+    <h1>Welcome to the Home page</h1>
+    <h1>{{name|cuts:"world"}}</h1>
+    <h1>{{number|add:"99"}}</h1>
+{% endblock %}
