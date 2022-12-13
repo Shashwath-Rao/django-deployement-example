@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.views.generic import View
 # Create your views here.
 def index(request):
     """
@@ -11,5 +11,6 @@ def index(request):
 def other(request):
     return render(request,"other.html")
 
-def relative(request):
-    return render(request,"relative.html")
+class Cbview(View):
+    def get(self,request):
+        return render(request,"relative.html")
